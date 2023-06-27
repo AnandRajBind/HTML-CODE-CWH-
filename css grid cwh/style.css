@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: red
+    ;
+    height: 700px;
+    /* width: 900px; */
+    display: grid;
+        /* kitne px ka kitna column chahiye */
+   
+    /* grid-template-columns: 133px 133px 133px; */
+     /* kitne px ka kitna row chahiye */
+    /* grid-template-rows: 133px 133px 133px; */
+    /* column ko 3 times repeat karo 1 fr(fraction) me using the full container  */
+    /* grid-template-columns: repeat(3, 1fr);   */
+    /* or */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* first row  and last row ko 50px aur jo baki container me space bacha hai use 1fr 1fr me equally devide kar do  */
+    grid-template-rows: 150px 1fr 50px;
+    /* grid-template-rows: repeat(3, 1fr); */
+
+    row-gap: 12px;
+    column-gap: 12px; 
+    /* working on the x axis (horizental) */
+/* justify-items: start; */
+/* justify-items: end; */
+/* working on the y axis (vertically) */
+/* align-items: center; */
+/* align-items: start; */
+/* align-items: end; */
+
+    /* working on the both x and y axis at tha same time  */
+place-items: center;
+}
+.item{
+    background-color: aqua;
+    height: 122px;
+    width: 122px; 
+}
+.header{
+    width: 100vw;
+/* grid-column-start:1 ;
+grid-column-end:4 ; */
+/* column 1 se start karo aur coumn 3 tk span kar do */
+grid-column: 1/ span 3;
+color: rgb(250, 240, 240);
+
+background-color: black
+
+}
+.item2{
+        /* working on the x axis (horizental) */
+
+    /* justify-self: start; */
+    /* justify-self: end; */
+
+    justify-self: center;
+/* working on the y axis (vertically) */
+
+    /* align-self: center; */
+    
+    /* align-self: end;
+     */
+    /* align-self: start;
+     */
+
+    /* working on the both x and y axis at tha same time  */
+    /* place-self: end;
+    place-self: start; */
+    /* place-self: center; */
+}
+
+.footer{
+    width: 100vw;
+grid-column-start:1 ;
+grid-column-end:4 ;
+color: white;
+background-color: black
+;
+}
